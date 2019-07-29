@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+            { "model": "block/stone", "weight": 60 },
+            { "model": "block/coal_ore_min1", "weight": 15 },
+            { "model": "block/coal_ore_min2", "weight": 15 },
+            { "model": "block/coal_ore", "weight": 10 }
+        ]
+    }
+}

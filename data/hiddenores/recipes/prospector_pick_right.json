@@ -1,0 +1,23 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+      "ggg",
+      "-sg",
+      "-s-"
+  ],
+  "key": {
+      "g": {
+          "item": "gold_ingot"
+      },
+      "s": {
+          "item": "stick"
+      },
+      "-": {
+          "item": "air"
+      }
+  },
+  "result": {
+      "item": "bat_spawn_egg",
+      "count": 1
+  }
+}

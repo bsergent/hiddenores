@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+            { "model": "block/stone", "weight": 20 },
+            { "model": "block/emerald_ore_min1", "weight": 35 },
+            { "model": "block/emerald_ore_min2", "weight": 35 },
+            { "model": "block/emerald_ore", "weight": 10 }
+        ]
+    }
+}

@@ -1,0 +1,1 @@
+# Highlight ores currently looked at
