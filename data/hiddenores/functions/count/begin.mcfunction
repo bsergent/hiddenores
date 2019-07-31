@@ -10,6 +10,8 @@ scoreboard players set @s ho_lapisact 0
 scoreboard players set @s ho_lapisrep 0
 scoreboard players set @s ho_goldact 0
 scoreboard players set @s ho_goldrep 0
+scoreboard players set @s ho_redstoneact 0
+scoreboard players set @s ho_redstonerep 0
 scoreboard players set @s ho_ironact 0
 scoreboard players set @s ho_ironrep 0
 scoreboard players set @s ho_coalact 0

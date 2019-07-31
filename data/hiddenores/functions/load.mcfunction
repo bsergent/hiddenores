@@ -25,6 +25,8 @@ scoreboard objectives add ho_lapisact dummy
 scoreboard objectives add ho_lapisrep dummy
 scoreboard objectives add ho_goldact dummy
 scoreboard objectives add ho_goldrep dummy
+scoreboard objectives add ho_redstoneact dummy
+scoreboard objectives add ho_redstonerep dummy
 scoreboard objectives add ho_ironact dummy
 scoreboard objectives add ho_ironrep dummy
 scoreboard objectives add ho_coalact dummy

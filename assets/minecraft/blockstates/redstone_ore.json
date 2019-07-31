@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "lit=false": [
+      { "model": "block/stone", "weight": 40 },
+      { "model": "block/redstone_ore_min1", "weight": 25 },
+      { "model": "block/redstone_ore_min2", "weight": 25 },
+      { "model": "block/redstone_ore", "weight": 10 }
+    ],
+    "lit=true": [
+      { "model": "block/stone", "weight": 40 },
+      { "model": "block/redstone_ore_min1", "weight": 25 },
+      { "model": "block/redstone_ore_min2", "weight": 25 },
+      { "model": "block/redstone_ore_on", "weight": 10 }
+    ]
+  }
+}

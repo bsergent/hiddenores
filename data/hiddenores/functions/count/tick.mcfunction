@@ -23,6 +23,12 @@ execute at @e[type=area_effect_cloud,tag=ho_counter] if block ~ ~ ~ minecraft:go
 execute at @e[type=area_effect_cloud,tag=ho_counter,tag=ho_proxclose] if block ~ ~ ~ minecraft:gold_ore run scoreboard players add @s ho_goldrep 1
 execute at @e[type=area_effect_cloud,tag=ho_counter,tag=ho_proxveryclose] if block ~ ~ ~ minecraft:gold_ore run scoreboard players add @s ho_goldrep 1
 
+# Redstone ore
+execute at @e[type=area_effect_cloud,tag=ho_counter] if block ~ ~ ~ minecraft:redstone_ore run scoreboard players add @s ho_redstoneact 1
+execute at @e[type=area_effect_cloud,tag=ho_counter] if block ~ ~ ~ minecraft:redstone_ore run scoreboard players add @s ho_redstonerep 1
+execute at @e[type=area_effect_cloud,tag=ho_counter,tag=ho_proxclose] if block ~ ~ ~ minecraft:redstone_ore run scoreboard players add @s ho_redstonerep 1
+execute at @e[type=area_effect_cloud,tag=ho_counter,tag=ho_proxveryclose] if block ~ ~ ~ minecraft:redstone_ore run scoreboard players add @s ho_redstonerep 1
+
 # Iron ore
 execute at @e[type=area_effect_cloud,tag=ho_counter] if block ~ ~ ~ minecraft:iron_ore run scoreboard players add @s ho_ironact 1
 execute at @e[type=area_effect_cloud,tag=ho_counter] if block ~ ~ ~ minecraft:iron_ore run scoreboard players add @s ho_ironrep 1

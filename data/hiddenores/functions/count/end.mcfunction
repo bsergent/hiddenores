@@ -44,6 +44,17 @@ execute as @s[scores={ho_goldrep=21..24},tag=!ho_reported,tag=!ho_falseneg] run 
 execute as @s[scores={ho_goldrep=25..},tag=!ho_reported,tag=!ho_falseneg] run title @s actionbar [{"text":"Found "}, {"text":"multiple","bold":true}, {"text":" deposits of "}, {"text":"gold","color":"gold"}, {"text":" ore."}]
 execute as @s[scores={ho_goldrep=1..},tag=!ho_falseneg] run tag @s add ho_reported
 
+# Redstone ore
+execute if score #ho_exact ho_calc matches 1 run tellraw @s [{ "text":"Found "}, {"score":{"name":"@s","objective":"ho_redstoneact"},"color":"red"}, { "text":" redstone ore. ("}, {"score":{"name":"@s","objective":"ho_redstonerep"}}, {"text":" reported)"}]
+function hiddenores:count/falsenegatives
+execute as @s[scores={ho_redstonerep=1..2},tag=!ho_reported,tag=!ho_falseneg] run title @s actionbar [{"text":"Found "}, {"text":"traces","bold":true}, {"text":" of "}, {"text":"redstone","color":"red"}, {"text":" ore."}]
+execute as @s[scores={ho_redstonerep=3..8},tag=!ho_reported,tag=!ho_falseneg] run title @s actionbar [{"text":"Found a "}, {"text":"small","bold":true}, {"text":" sample of "}, {"text":"redstone","color":"red"}, {"text":" ore."}]
+execute as @s[scores={ho_redstonerep=9..14},tag=!ho_reported,tag=!ho_falseneg] run title @s actionbar [{"text":"Found a "}, {"text":"medium","bold":true}, {"text":" sample of "}, {"text":"redstone","color":"red"}, {"text":" ore."}]
+execute as @s[scores={ho_redstonerep=15..20},tag=!ho_reported,tag=!ho_falseneg] run title @s actionbar [{"text":"Found a "}, {"text":"large","bold":true}, {"text":" sample of "}, {"text":"redstone","color":"red"}, {"text":" ore."}]
+execute as @s[scores={ho_redstonerep=21..24},tag=!ho_reported,tag=!ho_falseneg] run title @s actionbar [{"text":"Found a "}, {"text":"very large","bold":true}, {"text":" sample of "}, {"text":"redstone","color":"red"}, {"text":" ore."}]
+execute as @s[scores={ho_redstonerep=25..},tag=!ho_reported,tag=!ho_falseneg] run title @s actionbar [{"text":"Found "}, {"text":"multiple","bold":true}, {"text":" deposits of "}, {"text":"redstone","color":"red"}, {"text":" ore."}]
+execute as @s[scores={ho_redstonerep=1..},tag=!ho_falseneg] run tag @s add ho_reported
+
 # Iron ore
 execute if score #ho_exact ho_calc matches 1 run tellraw @s [{ "text":"Found "}, {"score":{"name":"@s","objective":"ho_ironact"},"color":"gray"}, { "text":" iron ore. ("}, {"score":{"name":"@s","objective":"ho_ironrep"}}, {"text":" reported)"}]
 function hiddenores:count/falsenegatives
