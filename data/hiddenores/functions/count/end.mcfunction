@@ -2,6 +2,7 @@ execute if score #ho_exact ho_calc matches 1 run tag @s add ho_reported
 
 # Diamond ore
 #execute if score #ho_rand ho_calc matches 4..7 as @s[scores={ho_diamondact=1..}] run scoreboard players operation @s ho_diamondrep /= #ho_rand ho_calc
+execute as @s[tag=!ho_goldpick] run scoreboard players set @s ho_diamondrep 0
 execute if score #ho_exact ho_calc matches 1 run tellraw @s [{ "text":"Found "}, {"score":{"name":"@s","objective":"ho_diamondact"},"color":"aqua"}, { "text":" diamond ore. ("}, {"score":{"name":"@s","objective":"ho_diamondrep"}}, {"text":" reported)"}]
 function hiddenores:count/falsenegatives
 execute as @s[scores={ho_diamondrep=1..2},tag=!ho_reported,tag=!ho_falseneg] run title @s actionbar [{"text":"Found "}, {"text":"traces","bold":true}, {"text":" of "}, {"text":"diamond","color":"aqua"}, {"text":" ore."}]
@@ -71,5 +72,6 @@ execute if score #ho_exact ho_calc matches 1 run title @s actionbar [{"text":"Fi
 
 tag @s remove ho_reported
 kill @e[type=area_effect_cloud,tag=ho_counter]
-scoreboard players set @s ho_usepick 0
+scoreboard players set @s ho_usegoldpick 0
+scoreboard players set @s ho_useironpick 0
 playsound minecraft:entity.villager.work_mason block @s ~ ~ ~ 0.3 0.8

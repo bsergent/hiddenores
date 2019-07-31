@@ -1,0 +1,23 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+      "iii",
+      "is-",
+      "-s-"
+  ],
+  "key": {
+      "i": {
+          "item": "iron_ingot"
+      },
+      "s": {
+          "item": "stick"
+      },
+      "-": {
+          "item": "air"
+      }
+  },
+  "result": {
+      "item": "blaze_spawn_egg",
+      "count": 1
+  }
+}

@@ -15,9 +15,12 @@ scoreboard players set @s ho_ironrep 0
 scoreboard players set @s ho_coalact 0
 scoreboard players set @s ho_coalrep 0
 
-scoreboard players set @s ho_checkx -7
-scoreboard players set @s ho_checky -7
-scoreboard players set @s ho_checkz -7
+execute as @s[tag=ho_goldpick] run scoreboard players set @s ho_checkx -7
+execute as @s[tag=ho_goldpick] run scoreboard players set @s ho_checky -7
+execute as @s[tag=ho_goldpick] run scoreboard players set @s ho_checkz -7
+execute as @s[tag=ho_ironpick] run scoreboard players set @s ho_checkx -5
+execute as @s[tag=ho_ironpick] run scoreboard players set @s ho_checky -5
+execute as @s[tag=ho_ironpick] run scoreboard players set @s ho_checkz -5
 # scoreboard players set @s ho_checkx -1
 # scoreboard players operation @s ho_checkx *= #ho_countradius ho_calc
 # scoreboard players set @s ho_checky -1
@@ -26,4 +29,5 @@ scoreboard players set @s ho_checkz -7
 # scoreboard players operation @s ho_checkz *= #ho_countradius ho_calc
 
 kill @e[type=area_effect_cloud,tag=ho_counter]
-summon area_effect_cloud ~-7 ~-7 ~-7 {Tags:["ho_counter"],NoGravity:1b,Particle:"block air",Radius:.5f,Duration:2147483647}
+execute as @s[tag=ho_goldpick] run summon area_effect_cloud ~-7 ~-7 ~-7 {Tags:["ho_counter"],NoGravity:1b,Particle:"block air",Radius:.5f,Duration:2147483647}
+execute as @s[tag=ho_ironpick] run summon area_effect_cloud ~-5 ~-5 ~-5 {Tags:["ho_counter"],NoGravity:1b,Particle:"block air",Radius:.5f,Duration:2147483647}

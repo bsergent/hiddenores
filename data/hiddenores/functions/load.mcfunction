@@ -1,14 +1,20 @@
 # Constants
 scoreboard objectives add ho_calc dummy
 scoreboard players set #ho_version ho_calc 1
+# Multiplier for random number for iron pick (bigger means higher chance of false negative, 1.5 means 1/2 chance, 2 means 2/3 chance)
+scoreboard players set #ho_ironnegmodnum ho_calc 2
+scoreboard players set #ho_ironnegmodden ho_calc 3
 function hiddenores:options
 
 # Check for ores in vicinity on mine
-scoreboard objectives add ho_usepick minecraft.used:minecraft.golden_pickaxe
+scoreboard objectives add ho_usegoldpick minecraft.used:minecraft.golden_pickaxe
+scoreboard objectives add ho_useironpick minecraft.used:minecraft.iron_pickaxe
 
 # Prospector pick crafting
-scoreboard objectives add ho_craftpick minecraft.crafted:minecraft.bat_spawn_egg
-scoreboard objectives add ho_eggstoremove dummy
+scoreboard objectives add ho_craftgoldpick minecraft.crafted:minecraft.bat_spawn_egg
+scoreboard objectives add ho_craftironpick minecraft.crafted:minecraft.blaze_spawn_egg
+scoreboard objectives add ho_eggbat dummy
+scoreboard objectives add ho_eggblaze dummy
 
 # Ore count in local area
 scoreboard objectives add ho_diamondact dummy
