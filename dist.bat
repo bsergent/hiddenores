@@ -19,7 +19,6 @@ rar a -zip -r ".\dist\Hidden Ores.zip" ".\data\*"
 call :colorEcho 70 "Finished creating new zip archive"
 echo.
 
-pause
 exit
 :colorEcho
 @echo off
